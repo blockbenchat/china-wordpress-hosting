@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Brand colors for ARZ Host
+        "ocean-green": "#006400",
+        "mango-orange": "#FFA500",
+        "ocean-blue": "#20B2AA",
+        "sand-yellow": "#FFFACD",
       },
       borderRadius: {
         lg: "var(--radius)",
