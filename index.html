@@ -3,12 +3,1594 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world project</title>
+    <title>China VPS Hosting - ARZ Host | Fast, Compliant, Always On</title>
+    <meta
+      name="description"
+      content="Professional China VPS hosting with ultra-low latency, ICP license assistance, and enterprise-grade security. Power your site from inside China."
+    />
+    <meta
+      name="keywords"
+      content="china vps hosting, vps hosting hong kong, china server hosting, ICP license, mainland china hosting"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --ocean-green: #006400;
+        --mango-orange: #ffa500;
+        --ocean-blue: #20b2aa;
+        --sand-yellow: #fffacd;
+        --background: #ffffff;
+        --foreground: #020817;
+        --muted-foreground: #64748b;
+        --border: #e2e8f0;
+        --card: #ffffff;
+        --radius: 8px;
+      }
+
+      body {
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        line-height: 1.6;
+        color: var(--foreground);
+        background-color: var(--background);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Header Styles */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo-icon {
+        width: 2rem;
+        height: 2rem;
+        background: var(--ocean-green);
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .logo-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--ocean-green);
+      }
+
+      .nav {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--foreground);
+        font-weight: 500;
+        font-size: 0.875rem;
+        transition: color 0.15s ease;
+      }
+
+      .nav a:hover {
+        color: var(--ocean-green);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: all 0.15s ease;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        height: 2.5rem;
+      }
+
+      .btn-primary {
+        background: var(--ocean-green);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #005200;
+      }
+
+      .btn-secondary {
+        background: var(--border);
+        color: var(--foreground);
+      }
+
+      .btn-lg {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+        height: auto;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 5rem 0 7rem;
+        background: linear-gradient(
+          to bottom right,
+          rgba(255, 250, 205, 0.2),
+          var(--background),
+          rgba(32, 178, 170, 0.05)
+        );
+      }
+
+      .hero-content {
+        max-width: 56rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.125rem 0.625rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        background: rgba(32, 178, 170, 0.1);
+        color: var(--ocean-blue);
+        border: 1px solid rgba(32, 178, 170, 0.2);
+      }
+
+      .hero h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+      }
+
+      .text-green {
+        color: var(--ocean-green);
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-white {
+        background: white;
+      }
+
+      .section-light {
+        background: rgba(255, 250, 205, 0.1);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      /* Grid Layouts */
+      .grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      /* Card Styles */
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        transition: border-color 0.15s ease;
+      }
+
+      .card:hover {
+        border-color: var(--ocean-blue);
+      }
+
+      .card-header {
+        margin-bottom: 1rem;
+      }
+
+      .card-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-content p {
+        color: var(--muted-foreground);
+      }
+
+      /* Pricing Cards */
+      .pricing-card {
+        position: relative;
+        text-align: center;
+      }
+
+      .pricing-card.popular {
+        border-color: var(--ocean-green);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--ocean-green);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--ocean-green);
+        margin: 1rem 0;
+      }
+
+      .feature-list {
+        list-style: none;
+        margin: 1rem 0;
+      }
+
+      .feature-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .check-icon {
+        width: 1rem;
+        height: 1rem;
+        color: var(--ocean-green);
+      }
+
+      /* Steps */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .step-number {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        margin: 0 auto 1rem;
+      }
+
+      .step-1 {
+        background: var(--ocean-green);
+      }
+      .step-2 {
+        background: var(--ocean-blue);
+      }
+      .step-3 {
+        background: var(--mango-orange);
+      }
+
+      /* Video Section */
+      .video-container {
+        max-width: 64rem;
+        margin: 0 auto;
+      }
+
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Testimonials */
+      .testimonial {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+      }
+
+      .stars {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .star {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: var(--mango-orange);
+        fill: var(--mango-orange);
+      }
+
+      .quote {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .cite {
+        color: var(--muted-foreground);
+        font-style: normal;
+      }
+
+      /* FAQ */
+      .faq-item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .faq-question {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-answer {
+        color: var(--muted-foreground);
+      }
+
+      /* CTA Section */
+      .cta {
+        background: var(--ocean-green);
+        color: white;
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Footer */
+      .footer {
+        background: #111827;
+        color: white;
+        padding: 4rem 0;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer h3 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer a {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.15s ease;
+      }
+
+      .footer a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #374151;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        color: #9ca3af;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .nav {
+          display: flex;
+        }
+
+        .hero h1 {
+          font-size: 3.75rem;
+        }
+
+        .section-title h2 {
+          font-size: 2.25rem;
+        }
+
+        .cta-actions {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .grid-5 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .grid-2,
+        .grid-3,
+        .grid-4,
+        .grid-5 {
+          grid-template-columns: 1fr;
+        }
+
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .pricing-card.popular {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 3rem 0 5rem;
+        }
+
+        .section {
+          padding: 3rem 0;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <div class="logo-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+            </div>
+            <span class="logo-text">ARZ Host</span>
+          </div>
 
-    <script type="module" src="/client/main.tsx"></script>
+          <nav class="nav">
+            <a href="https://arzhost.com/region-based-vps/">VPS Region</a>
+            <a href="https://arzhost.com/vps/">VPS Server Hong Kong</a>
+            <a href="https://arzhost.com/lifetime-web-hosting/"
+              >Lifetime Web Hosting</a
+            >
+            <a href="https://www.arzhost.com/about-us/">About Us</a>
+            <a href="https://www.arzhost.com/contact-us/">Contact</a>
+          </nav>
+
+          <a href="https://arzhost.com/vps/" class="btn btn-primary"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge">China‑Ready VPS Hosting</div>
+          <h1>
+            Power your site from inside China—<span class="text-green"
+              >fast, compliant, and always on</span
+            >
+          </h1>
+          <p>
+            Low‑latency servers, ICP‑license assistance, and enterprise‑grade
+            security in one affordable package.
+          </p>
+          <a href="https://arzhost.com/vps/" class="btn btn-primary btn-lg"
+            >Launch My China VPS →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-title">
+          <h2>💡 Why Host Inside Mainland China?</h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="card-header">
+              <svg
+                class="check-icon"
+                style="
+                  width: 2rem;
+                  height: 2rem;
+                  color: var(--ocean-blue);
+                  margin-bottom: 0.5rem;
+                "
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="13,17 6,10 12,15" />
+                <path d="m9 11 3 3 8-8" />
+              </svg>
+              <div class="card-title">Ultra‑Low Latency</div>
+            </div>
+            <div class="card-content">
+              <p>
+                Pages open in milliseconds for visitors across Beijing,
+                Shanghai, Shenzhen, and beyond—no Great‑Firewall slow‑downs.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <svg
+                class="check-icon"
+                style="
+                  width: 2rem;
+                  height: 2rem;
+                  color: var(--mango-orange);
+                  margin-bottom: 0.5rem;
+                "
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <div class="card-title">Baidu & Local‑SEO Boost</div>
+            </div>
+            <div class="card-content">
+              <p>
+                Search engines rank sites hosted on Chinese IPs higher, giving
+                you front‑page visibility for local keywords.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <svg
+                class="check-icon"
+                style="
+                  width: 2rem;
+                  height: 2rem;
+                  color: var(--ocean-green);
+                  margin-bottom: 0.5rem;
+                "
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div class="card-title">Legal Compliance</div>
+            </div>
+            <div class="card-content">
+              <p>
+                We walk you through ICP filing, keeping your brand 100% in line
+                with MIIT regulations.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <svg
+                class="check-icon"
+                style="
+                  width: 2rem;
+                  height: 2rem;
+                  color: var(--ocean-blue);
+                  margin-bottom: 0.5rem;
+                "
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+              <div class="card-title">Chinese CDN Access</div>
+            </div>
+            <div class="card-content">
+              <p>
+                Nationwide content delivery ensures lightning‑fast image, video,
+                and file loads—even during peak traffic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>
+            📦 VPS Plans & Pricing — Powered by
+            <a
+              href="https://arzhost.com/"
+              style="color: var(--ocean-green); text-decoration: underline"
+              >ARZ Host</a
+            >
+          </h2>
+        </div>
+
+        <div class="grid grid-5">
+          <div class="card pricing-card">
+            <div class="card-header">
+              <div class="card-title">Starter VPS</div>
+              <div class="price">$12.50</div>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem">
+                Monthly Price*
+              </p>
+            </div>
+            <div class="card-content">
+              <ul class="feature-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">1 vCore / 2 GB</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">20 GB NVMe SSD</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">250 Mbit Bandwidth</span>
+                </li>
+              </ul>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+
+          <div class="card pricing-card">
+            <div class="card-header">
+              <div class="card-title">Value VPS</div>
+              <div class="price">$16.00</div>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem">
+                Monthly Price*
+              </p>
+            </div>
+            <div class="card-content">
+              <ul class="feature-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">1 vCore / 2 GB</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">40 GB NVMe SSD</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">250 Mbit Bandwidth</span>
+                </li>
+              </ul>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+
+          <div class="card pricing-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <div class="card-header">
+              <div class="card-title">Essential VPS</div>
+              <div class="price">$34.00</div>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem">
+                Monthly Price*
+              </p>
+            </div>
+            <div class="card-content">
+              <ul class="feature-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">2 vCores / 4 GB</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">80 GB NVMe SSD</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">250 Mbit Bandwidth</span>
+                </li>
+              </ul>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+
+          <div class="card pricing-card">
+            <div class="card-header">
+              <div class="card-title">Comfort VPS</div>
+              <div class="price">$54.00</div>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem">
+                Monthly Price*
+              </p>
+            </div>
+            <div class="card-content">
+              <ul class="feature-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">4 vCores / 8 GB</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">160 GB NVMe SSD</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">250 Mbit Bandwidth</span>
+                </li>
+              </ul>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+
+          <div class="card pricing-card">
+            <div class="card-header">
+              <div class="card-title">Elite VPS</div>
+              <div class="price">$60.00+</div>
+              <p style="color: var(--muted-foreground); font-size: 0.875rem">
+                Monthly Price*
+              </p>
+            </div>
+            <div class="card-content">
+              <ul class="feature-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">8 vCores / 8–32 GB</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">160–640 GB NVMe SSD</span>
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span style="font-size: 0.875rem">250 Mbit Bandwidth</span>
+                </li>
+              </ul>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <p
+          style="
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-top: 2rem;
+          "
+        >
+          *Pricing verified July 1 2025.
+          <a
+            href="https://arzhost.com/"
+            style="color: var(--ocean-green); text-decoration: underline"
+            >arzhost.com</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-title">
+          <h2>🔑 What's Included—Every Plan</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              Full Root Access – Install any OS or software stack; you're in
+              total control.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              NVMe‑Backed Storage – Up to 6× faster reads/writes than SATA SSDs
+              for snappy databases and CMSs.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              KVM Virtualization – Dedicated CPU & RAM, isolated from noisy
+              neighbors for stable performance.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              DDoS Shield – Always‑on mitigation keeps your site online when
+              attacks strike.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              24/7 Bilingual Support – Mandarin & English engineers on live
+              chat, email, and phone.
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+            <svg
+              class="check-icon"
+              style="margin-top: 0.125rem; flex-shrink: 0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p style="color: var(--muted-foreground)">
+              Weekly Snapshots – Automated backups with single‑click restores
+              safeguard your data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Recommendations -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>🎯 Which Plan Fits You?</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" style="font-size: 1.25rem">
+                Starter / Value
+              </div>
+            </div>
+            <div class="card-content">
+              <p>
+                Perfect for personal blogs, small business sites, or staging
+                servers. Two gigs of RAM keep WordPress, Joomla, or Ghost
+                running smoothly while NVMe drives slash load times.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" style="font-size: 1.25rem">Essential</div>
+            </div>
+            <div class="card-content">
+              <p>
+                A dual‑core boost for growing stores or SaaS MVPs. Handles
+                moderate traffic, small databases, and light API workloads
+                without breaking the bank.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" style="font-size: 1.25rem">Comfort</div>
+            </div>
+            <div class="card-content">
+              <p>
+                Quad‑core muscle and 8 GB RAM deliver headroom for high‑traffic
+                e‑commerce, multiple client sites, or real‑time apps. Great
+                choice when uptime and speed drive revenue.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" style="font-size: 1.25rem">Elite</div>
+            </div>
+            <div class="card-content">
+              <p>
+                Enterprise horsepower for large catalogs, media platforms, or
+                regional clusters. Scale RAM to 32 GB and storage to 640 GB as
+                demand spikes—no migration needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-title">
+          <h2>⚙️ From Checkout to Go‑Live—in Three Steps</h2>
+        </div>
+
+        <div class="steps">
+          <div>
+            <div class="step-number step-1">1</div>
+            <h3
+              style="
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Pick a Plan
+            </h3>
+            <p style="color: var(--muted-foreground)">
+              Order online; servers provision in minutes.
+            </p>
+          </div>
+
+          <div>
+            <div class="step-number step-2">2</div>
+            <h3
+              style="
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Submit ICP Docs
+            </h3>
+            <p style="color: var(--muted-foreground)">
+              We review and file with MIIT, guiding every requirement.
+            </p>
+          </div>
+
+          <div>
+            <div class="step-number step-3">3</div>
+            <h3
+              style="
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Deploy & Scale
+            </h3>
+            <p style="color: var(--muted-foreground)">
+              Upload your code, attach a Chinese CDN, and expand resources
+              anytime from your dashboard.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="https://arzhost.com/vps/" class="btn btn-primary btn-lg"
+            >Get Started →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Watch How It Works</h2>
+        </div>
+
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/p8qVXz_2mPI?si=C1osDG1w3_-FfbdG"
+              title="ARZ Host VPS Hosting Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-title">
+          <h2>⭐ Client Stories</h2>
+        </div>
+
+        <div class="grid grid-2" style="max-width: 64rem; margin: 0 auto">
+          <div class="testimonial">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <blockquote class="quote">
+              "Switching to a mainland VPS cut our page load from 4s to under
+              1s. Baidu rankings jumped within weeks."
+            </blockquote>
+            <cite class="cite">— Liang Z., Head of E‑Commerce, Shenzhen</cite>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <blockquote class="quote">
+              "The ARZ team made the ICP process painless. Our China microsite
+              was live ahead of schedule and under budget."
+            </blockquote>
+            <cite class="cite">— Rachel M., Global Marketing Director</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>❓ Frequently Asked Questions</h2>
+        </div>
+
+        <div style="max-width: 64rem; margin: 0 auto">
+          <div class="faq-item">
+            <div class="faq-question">Do I really need an ICP license?</div>
+            <div class="faq-answer">
+              Yes. Any public website hosted on a Chinese server must display a
+              valid ICP number. Hosting without one risks takedown by local
+              ISPs. We handle the paperwork, translations, and direct submission
+              so you can focus on launch day.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can a foreign‑owned company apply for ICP?
+            </div>
+            <div class="faq-answer">
+              Absolutely. You'll need a Chinese‑registered business entity or a
+              local partner; we'll outline acceptable structures, gather the
+              required ID & corporate docs, and liaise with MIIT until approval
+              comes through (typically 2–3 weeks).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What if my traffic suddenly spikes?</div>
+            <div class="faq-answer">
+              Our on‑demand scaling adds CPU, RAM, or storage in seconds, with
+              no downtime. Combined with unmetered 250 Mbit bandwidth and
+              optional Chinese CDN nodes, your site stays quick—even during
+              flash sales or viral campaigns.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Is the VPS fully managed?</div>
+            <div class="faq-answer">
+              By default, servers are self‑managed to give you maximum freedom.
+              If you prefer hands‑off operations, add a managed‑service pack and
+              our sysadmins will handle updates, hardening, and monitoring
+              24/7—backed by strict SLAs.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">How secure is my data?</div>
+            <div class="faq-answer">
+              Each instance lives in an isolated KVM container with its own
+              firewall. Weekly snapshots plus optional daily backups let you
+              roll back any time. Enterprise‑grade DDoS filtering and 24/7
+              security ops keep threats at bay.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+      <div class="container">
+        <h2>🌟 Ready to Dominate the Chinese Market?</h2>
+        <p>
+          Launch a compliant, high‑performance VPS today—backed by local
+          expertise and global‑grade infrastructure.
+        </p>
+        <div class="cta-actions">
+          <a href="https://arzhost.com/vps/" class="btn btn-secondary btn-lg"
+            >Start My China VPS</a
+          >
+          <div class="contact-info">
+            <span>Live Chat</span>
+            <span>|</span>
+            <span>+86‑400‑123‑4567</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="logo-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                  <line x1="6" x2="6.01" y1="6" y2="6" />
+                  <line x1="6" x2="6.01" y1="18" y2="18" />
+                </svg>
+              </div>
+              <span style="font-size: 1.25rem; font-weight: 700">ARZ Host</span>
+            </div>
+            <p style="color: #9ca3af; margin-bottom: 1rem">
+              Professional
+              <a
+                href="https://arzhost.com/vps/"
+                style="color: var(--ocean-green); text-decoration: underline"
+                >vps hosting hong kong</a
+              >
+              and China VPS solutions.
+            </p>
+            <div style="font-size: 0.875rem; color: #9ca3af">
+              <p style="margin-bottom: 0.5rem">
+                Website:
+                <a
+                  href="https://arzhost.com/"
+                  style="color: var(--ocean-green); text-decoration: underline"
+                  >arzhost.com</a
+                >
+              </p>
+              <p>Phone: +1 (631) 594-8060</p>
+            </div>
+          </div>
+
+          <div>
+            <h3>Services</h3>
+            <ul>
+              <li>
+                <a href="https://arzhost.com/region-based-vps/">VPS Region</a>
+              </li>
+              <li>
+                <a href="https://arzhost.com/vps/">VPS Server Hong Kong</a>
+              </li>
+              <li>
+                <a href="https://arzhost.com/lifetime-web-hosting/"
+                  >Lifetime Web Hosting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="https://www.arzhost.com/about-us/">About Us</a></li>
+              <li>
+                <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Legal</h3>
+            <ul>
+              <li>
+                <a href="https://www.arzhost.com/terms-conditions/"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/disclaimer/">Disclaimer</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ARZ Host. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
